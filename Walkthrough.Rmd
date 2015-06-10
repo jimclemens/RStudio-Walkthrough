@@ -1,0 +1,150 @@
+---
+title: "RStudio Walkthrough"
+author: "Jim Clemens"
+date: "June 10, 2015"
+output: ioslides_presentation
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(eval = TRUE, include = TRUE, echo = TRUE)
+```
+
+## RStudio: Making R Awesome
+
+### Our mission: Give analysts working in R tools to be more productive and effective
+<br>
+
+### 70% of our R&D investments are in open source products
+<br>
+
+### Our Professional products fund our development activities
+
+## RStudio Products
+- RStudio IDE
+- Shiny
+- RMarkdown
+- R Packages
+- Professional Products
+
+## RStudio IDE
+
+### Version 0.99 now out!
+
+- Overhaul of auto-complete
+- New data viewer
+- Code diagnostics in the editor
+- Cusomizable code snippets
+- Rcpp tools
+- Several other improvements
+
+## RStudio IDE (cont'd)
+
+### Projects
+
+- Allows you to create multiple contexts (working directory, workspace, history, and source docs)
+<br>
+
+### Integrated support for Git and Subversion
+<br>
+
+### Available Server Based
+
+- Access via web browser
+- Move computation closer to the data
+- Reduce data loading latency
+- Scale compute and RAM centrally
+<br>
+
+## Shiny - Easy web applications in R
+
+- Open source R package
+- Turn analyses into interactive web apps
+- No HTML, CSS, or JavaScript knowledge needed
+- Allows you to anticipate refinements
+- You select the variables
+- No more re-run, download, cut & paste process
+- Reduces iteration and improves insight
+
+## A Simple Shiny App
+Number of obs:
+```{r echo = TRUE, eval = FALSE}
+numericInput("n", "",50)
+```
+See the plot:
+```{r echo = TRUE, eval = FALSE}
+renderPlot({
+    hist(runif(input$n))
+  })
+```
+----
+Number of obs:
+```{r echo = FALSE, eval = TRUE}
+numericInput("n", "",50)
+```
+See the plot:
+```{r echo = FALSE, eval = TRUE}
+renderPlot({
+    hist(runif(input$n))
+  })
+```
+
+
+## Shiny Examples
+
+[kmeans](http://shiny.rstudio.com/gallery/kmeans-example.html)
+
+[Streaming Download Monitor](https://gallery.shinyapps.io/087-crandash)
+
+[Movie Explorer](http://shiny.rstudio.com/gallery/movie-explorer.html)
+
+[Superzip](http://shiny.rstudio.com/gallery/superzip-example.html)
+
+## htmlwidgets
+
+### JavaScript data visualization libraries available in R
+
+- Numerous bindings available (ex: d3)
+- New bindings being created by community
+- Instructions for building bindings on the site
+
+[htmlwidgets](http://www.htmlwidgets.org/)
+
+### RMarkdown
+
+- Simple report and documentation creation
+- Embedded R code - source and output
+- Makes data preparation and analyses fully reproducible
+- Re-running source updates output with current values
+- Supports HTML, pdf, Word, beamer and ioslides output
+- This presentation is RMarkdown!
+
+### R Packages
+
+- dplyr
+- ggplot2
+- ggvis (interactive, next generation of ggplot2)
+- packrat (dependency management)
+- several others
+
+### Professional Products
+
+- 
+
+## R Output
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
