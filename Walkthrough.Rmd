@@ -10,9 +10,9 @@ runtime: shiny
 knitr::opts_chunk$set(eval = TRUE, include = TRUE, echo = TRUE)
 ```
 
-## RStudio: Making R Awesome
+## **RStudio: Making R Awesome**
 
-### Our mission: Give analysts working in R tools to be more productive and effective
+### **Our mission:** Give analysts working in R tools to be more productive and effective
 <br>
 
 ### 70% of our R&D investments are in open source products
@@ -110,16 +110,18 @@ renderPlot({
 
 [htmlwidgets](http://www.htmlwidgets.org/)
 
-### RMarkdown
+## RMarkdown
 
 - Simple report and documentation creation
 - Embedded R code - source and output
 - Makes data preparation and analyses fully reproducible
 - Re-running source updates output with current values
 - Supports HTML, pdf, Word, beamer and ioslides output
-- This presentation is RMarkdown!
+- This presentation was produced with RMarkdown!
 
-### R Packages
+[RMarkdown](http://rmarkdown.rstudio.com/)
+
+## R Packages
 
 - dplyr
 - ggplot2
@@ -127,24 +129,31 @@ renderPlot({
 - packrat (dependency management)
 - several others
 
-### Professional Products
+[R Packages](http://www.rstudio.com/products/rpackages/)
 
-- 
+## Professional Products - RStudio Server Pro
 
-## R Output
+### Added capabilities for corporate deployments
+- Authentication (AD, LDAP, PAM)
+- Enhanced ecurity
+- Resource allocation (global, group and user)
+- Advanced resource management (profiles, databases, versions, packages, CPU, etc.)
+- Load balancing
+- Performance monitoring
+- RStudio support
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+[RStudio Comparison](http://www.rstudio.com/products/rstudio/)
 
-```{r cars}
-summary(cars)
-```
+## Professional Products - Shiny Server Pro
 
-## Plots
+- Authentication (AD, LDAP, PAM)
+- Multiple R processes per application
+- Enhanced security
+- Application concurrency limits
+- Appoication and system erformance monitoring
+- RStudio support
 
-You can also embed plots, for example:
+[Shiny Comparison](http://www.rstudio.com/products/shiny/shiny-server/)
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+### *Professional products fund all our development!*
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
